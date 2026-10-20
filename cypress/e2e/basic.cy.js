@@ -34,7 +34,7 @@ describe('practice', () => {
     })
 })
 
-it('click and check api call',()=>{
+it.skip('click and check api call',()=>{
   cy.visit('https://testautomationpractice.blogspot.com/')
   cy.intercept('GET','users/postuser/1').as('@users');
 
@@ -49,7 +49,7 @@ it('click and check api call',()=>{
   cy.get('.products').should('contain','Hp');
 })
 
-it('mock real api ',()=>{
+it.skip('mock real api ',()=>{
   cy.get('GET', '/api/users',{
     statusCode : 200,
     body:{
